@@ -50,3 +50,5 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/*
 
 %changelog
+* Thu Jun 28 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.2.900-1
+- Initial SPEC release.
