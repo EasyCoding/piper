@@ -1,11 +1,15 @@
+%global commit0 5f6ed202a57c64c9dcd614006aa0e16d49449c76
+%global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
+%global date 20180214
+
 Name: piper
 Version: 0.2.900
-Release: 1%{?dist}
+Release: 1.%{date}git%{shortcommit0}%{?dist}
 Summary: GTK application to configure gaming mice
 
 License: GPLv2
 URL: https://github.com/libratbag/%{name}
-Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0: %{url}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 BuildArch: noarch
 
 BuildRequires: meson
@@ -50,5 +54,5 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/*
 
 %changelog
-* Thu Jun 28 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.2.900-1
+* Thu Jun 28 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.2.900-1.20180214git5f6ed20
 - Initial SPEC release.
