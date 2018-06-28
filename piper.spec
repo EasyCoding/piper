@@ -12,13 +12,13 @@ URL: https://github.com/libratbag/%{name}
 Source0: %{url}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 BuildArch: noarch
 
-BuildRequires: meson
-BuildRequires: python3-devel
-BuildRequires: libratbag-ratbagd
-BuildRequires: pygobject3-devel
-BuildRequires: gettext-devel
 BuildRequires: desktop-file-utils
 BuildRequires: libappstream-glib
+BuildRequires: libratbag-ratbagd
+BuildRequires: pygobject3-devel
+BuildRequires: python3-devel
+BuildRequires: gettext-devel
+BuildRequires: meson
 
 Requires: libratbag-ratbagd%{?_isa}
 
