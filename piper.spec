@@ -36,7 +36,7 @@ sed -i '/meson_install.sh/d' meson.build
 
 %check
 %meson_test
-desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
+desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 
 %install
 %meson_install
