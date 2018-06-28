@@ -29,7 +29,7 @@ Piper is a GTK+ application to configure gaming mice, using libratbag
 via ratbagd.
 
 %prep
-%autosetup -p1
+%autosetup -n %{name}-%{commit0} -p1
 sed -i '/meson_install.sh/d' meson.build
 
 %build
