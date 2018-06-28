@@ -20,6 +20,8 @@ BuildRequires: python3-devel
 BuildRequires: gettext-devel
 BuildRequires: meson
 
+Requires: hicolor-icon-theme
+
 %{?python_provide:%python_provide python3-%{name}}
 
 %description
