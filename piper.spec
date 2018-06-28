@@ -20,8 +20,6 @@ BuildRequires: python3-devel
 BuildRequires: gettext-devel
 BuildRequires: meson
 
-Requires: libratbag-ratbagd%{?_isa}
-
 %{?python_provide:%python_provide python3-%{name}}
 
 %description
