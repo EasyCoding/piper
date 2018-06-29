@@ -7,7 +7,7 @@ Version: 0.2.900
 Release: 1.%{date}git%{shortcommit0}%{?dist}
 Summary: GTK application to configure gaming mice
 
-License: GPLv2
+License: GPLv2+ and LGPLv2.1+
 URL: https://github.com/libratbag/%{name}
 Source0: %{url}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 BuildArch: noarch
