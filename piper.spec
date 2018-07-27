@@ -4,7 +4,7 @@
 
 Name: piper
 Version: 0.2.900
-Release: 1.%{date}git%{shortcommit0}%{?dist}
+Release: 3.%{date}git%{shortcommit0}%{?dist}
 Summary: GTK application to configure gaming mice
 
 License: GPLv2+ and LGPLv2.1+
@@ -54,5 +54,11 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/*
 
 %changelog
+* Fri Jul 13 2018 Fedora Release Engineering <releng@fedoraproject.org> - 0.2.900-3.20180214git5f6ed20
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
+
+* Mon Jul 02 2018 Miro Hrončok <mhroncok@redhat.com> - 0.2.900-2.20180214git5f6ed20
+- Rebuilt for Python 3.7
+
 * Thu Jun 28 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.2.900-1.20180214git5f6ed20
 - Initial SPEC release.
