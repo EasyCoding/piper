@@ -5,7 +5,7 @@ Release: 1%{?dist}
 License: GPLv2+ and LGPLv2.1+
 URL: https://github.com/libratbag/%{name}
 Summary: GTK application to configure gaming mice
-Source0: %{url}/archive/%{commit0}.tar.gz#/%{name}-%{version}.tar.gz
+Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch: noarch
 
 BuildRequires: libratbag-ratbagd >= 0.9.902
