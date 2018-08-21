@@ -20,7 +20,10 @@ BuildRequires: python3-devel
 BuildRequires: gettext-devel
 BuildRequires: meson
 
+Requires: libratbag-ratbagd%{?_isa} >= 0.9.902
 Requires: hicolor-icon-theme
+Requires: python3dist(evdev)
+Requires: gtk3%{?_isa}
 
 %{?python_provide:%python_provide python3-%{name}}
 
