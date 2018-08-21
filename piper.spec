@@ -1,15 +1,11 @@
-%global commit0 5f6ed202a57c64c9dcd614006aa0e16d49449c76
-%global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
-%global date 20180214
-
 Name: piper
-Version: 0.2.900
-Release: 3.%{date}git%{shortcommit0}%{?dist}
-Summary: GTK application to configure gaming mice
+Version: 0.2.901
+Release: 1%{?dist}
 
 License: GPLv2+ and LGPLv2.1+
 URL: https://github.com/libratbag/%{name}
-Source0: %{url}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
+Summary: GTK application to configure gaming mice
+Source0: %{url}/archive/%{commit0}.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch: noarch
 
 BuildRequires: libratbag-ratbagd >= 0.9.902
@@ -20,10 +16,10 @@ BuildRequires: python3-devel
 BuildRequires: gettext-devel
 BuildRequires: meson
 
-Requires: libratbag-ratbagd%{?_isa} >= 0.9.902
 Requires: hicolor-icon-theme
-Requires: python3dist(evdev)
-Requires: gtk3%{?_isa}
+Requires: libratbag-ratbagd
+Requires: python3-evdev
+Requires: gtk3
 
 %{?python_provide:%python_provide python3-%{name}}
 
@@ -57,6 +53,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/*
 
 %changelog
+* Tue Aug 21 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.2.901-1
+- Updated to version 0.2.901.
+
 * Fri Jul 13 2018 Fedora Release Engineering <releng@fedoraproject.org> - 0.2.900-3.20180214git5f6ed20
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
