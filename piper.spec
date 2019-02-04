@@ -1,6 +1,6 @@
 Name: piper
-Version: 0.2.901
-Release: 1%{?dist}
+Version: 0.2.903
+Release: 2%{?dist}
 
 License: GPLv2+ and LGPLv2+
 URL: https://github.com/libratbag/%{name}
@@ -8,7 +8,6 @@ Summary: GTK application to configure gaming mice
 Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch: noarch
 
-BuildRequires: libratbag-ratbagd >= 0.9.902
 BuildRequires: desktop-file-utils
 BuildRequires: libappstream-glib
 BuildRequires: pygobject3-devel
@@ -17,8 +16,8 @@ BuildRequires: gettext-devel
 BuildRequires: meson
 
 Requires: hicolor-icon-theme
-Requires: libratbag-ratbagd
-Requires: python3-evdev
+Requires: libratbag-ratbagd >= 0.9.903
+Requires: python3-evdev python3-lxml
 Requires: gtk3
 
 %{?python_provide:%python_provide python3-%{name}}
@@ -50,9 +49,22 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{python3_sitelib}/*
 %{_datadir}/%{name}
 %{_datadir}/applications/*.desktop
+%{_metainfodir}/*.appdata.xml
 %{_datadir}/icons/hicolor/*/apps/*
 
 %changelog
+* Sat Feb 02 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.2.903-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+
+* Thu Jan 24 2019 Peter Hutterer <peter.hutterer@redhat.com> 0.2.903-1
+- Updated to version 0.2.903.
+
+* Wed Sep 26 2018 Peter Hutterer <peter.hutterer@redhat.com> 0.2.902-2
+- Add missing Requires python3-lxml (#1632979)
+
+* Mon Sep 10 2018 Peter Hutterer <peter.hutterer@redhat.com> 0.2.902-1
+- Updated to version 0.2.902.
+
 * Tue Aug 21 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.2.901-1
 - Updated to version 0.2.901.
 
