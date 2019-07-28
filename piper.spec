@@ -1,6 +1,6 @@
 Name: piper
-Version: 0.2.903
-Release: 2%{?dist}
+Version: 0.2.904
+Release: 3%{?dist}
 
 License: GPLv2+ and LGPLv2+
 URL: https://github.com/libratbag/%{name}
@@ -13,10 +13,11 @@ BuildRequires: libappstream-glib
 BuildRequires: pygobject3-devel
 BuildRequires: python3-devel
 BuildRequires: gettext-devel
+BuildRequires: python3-lxml
 BuildRequires: meson
 
 Requires: hicolor-icon-theme
-Requires: libratbag-ratbagd >= 0.9.903
+Requires: libratbag-ratbagd >= 0.9.905
 Requires: python3-evdev python3-lxml
 Requires: gtk3
 
@@ -53,6 +54,15 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/*
 
 %changelog
+* Fri Jul 26 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.2.904-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
+
+* Thu Feb 28 2019 Peter Hutterer <peter.hutterer@redhat.com> 0.2.904-2
+- Add python3-lxml to BuildRequires to pass the checks
+
+* Thu Feb 28 2019 Peter Hutterer <peter.hutterer@redhat.com> 0.2.904-1
+- Update to version 0.2.904.
+
 * Sat Feb 02 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.2.903-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
 
