@@ -1,11 +1,12 @@
 Name: piper
-Version: 0.2.904
-Release: 3%{?dist}
+Version: 0.3
+Release: 2%{?dist}
 
 License: GPLv2+ and LGPLv2+
 URL: https://github.com/libratbag/%{name}
 Summary: GTK application to configure gaming mice
 Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+
 BuildArch: noarch
 
 BuildRequires: desktop-file-utils
@@ -14,10 +15,10 @@ BuildRequires: pygobject3-devel
 BuildRequires: python3-devel
 BuildRequires: gettext-devel
 BuildRequires: python3-lxml
-BuildRequires: meson
+BuildRequires: meson git
 
 Requires: hicolor-icon-theme
-Requires: libratbag-ratbagd >= 0.9.905
+Requires: libratbag-ratbagd >= 0.10
 Requires: python3-evdev python3-lxml
 Requires: gtk3
 
@@ -28,7 +29,7 @@ Piper is a GTK+ application to configure gaming mice, using libratbag
 via ratbagd.
 
 %prep
-%autosetup -p1
+%autosetup -S git
 sed -i '/meson_install.sh/d' meson.build
 
 %build
@@ -54,6 +55,15 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/*
 
 %changelog
+* Mon Aug 19 2019 Miro Hrončok <mhroncok@redhat.com> - 0.3-2
+- Rebuilt for Python 3.8
+
+* Fri Aug 02 2019 Peter Hutterer <peter.hutterer@redhat.com> 0.3-1
+- piper 0.3
+
+* Mon Jul 29 2019 Peter Hutterer <peter.hutterer@redhat.com> 0.2.905-1
+- piper 0.2.905
+
 * Fri Jul 26 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.2.904-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
