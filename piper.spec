@@ -1,25 +1,28 @@
 Name: piper
 Version: 0.3
-Release: 4%{?dist}
+Release: 5%{?dist}
 
 License: GPLv2+ and LGPLv2+
 URL: https://github.com/libratbag/%{name}
 Summary: GTK application to configure gaming mice
-Source0: %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0: %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildArch: noarch
 
 BuildRequires: desktop-file-utils
 BuildRequires: libappstream-glib
+BuildRequires: libratbag-ratbagd
 BuildRequires: pygobject3-devel
 BuildRequires: python3-devel
 BuildRequires: gettext-devel
 BuildRequires: python3-lxml
-BuildRequires: meson git
+BuildRequires: meson
+BuildRequires: git
 
 Requires: hicolor-icon-theme
 Requires: libratbag-ratbagd >= 0.10
-Requires: python3-evdev python3-lxml
+Requires: python3-evdev
+Requires: python3-lxml
 Requires: gtk3
 
 %{?python_provide:%python_provide python3-%{name}}
@@ -48,13 +51,16 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %doc README.md
 %license COPYING
 %{_bindir}/%{name}
-%{python3_sitelib}/*
 %{_datadir}/%{name}
+%{python3_sitelib}/%{name}/
 %{_datadir}/applications/*.desktop
 %{_metainfodir}/*.appdata.xml
 %{_datadir}/icons/hicolor/*/apps/*
 
 %changelog
+* Fri Jan 31 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 0.3-5
+- Performed SPEC cleanup to follow modern Fedora guidelines.
+
 * Thu Jan 30 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0.3-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
