@@ -1,5 +1,5 @@
 Name: piper
-Version: 0.4
+Version: 0.5
 Release: 1%{?dist}
 
 License: GPLv2+ and LGPLv2+
@@ -58,6 +58,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/*
 
 %changelog
+* Mon May 25 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 0.5-1
+- Updated to version 0.5.
+
 * Tue Feb 11 2020 Peter Hutterer <peter.hutterer@redhat.com> 0.4-1
 - piper 0.4
 
