@@ -1,6 +1,6 @@
 Name: piper
-Version: 0.3
-Release: 5%{?dist}
+Version: 0.4
+Release: 1%{?dist}
 
 License: GPLv2+ and LGPLv2+
 URL: https://github.com/libratbag/%{name}
@@ -58,6 +58,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/*
 
 %changelog
+* Tue Feb 11 2020 Peter Hutterer <peter.hutterer@redhat.com> 0.4-1
+- piper 0.4
+
 * Fri Jan 31 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 0.3-5
 - Performed SPEC cleanup to follow modern Fedora guidelines.
 
