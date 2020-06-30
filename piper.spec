@@ -1,6 +1,6 @@
 Name: piper
-Version: 0.5
-Release: 2%{?dist}
+Version: 0.5.1
+Release: 1%{?dist}
 
 License: GPLv2+ and LGPLv2+
 URL: https://github.com/libratbag/%{name}
@@ -58,6 +58,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/*
 
 %changelog
+* Tue Jun 30 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 0.5.1-1
+- Updated to version 0.5.1.
+
 * Tue May 26 2020 Miro Hrončok <mhroncok@redhat.com> - 0.5-2
 - Rebuilt for Python 3.9
 
