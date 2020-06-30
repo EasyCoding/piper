@@ -56,6 +56,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/applications/*.desktop
 %{_metainfodir}/*.appdata.xml
 %{_datadir}/icons/hicolor/*/apps/*
+%{_mandir}/man1/*.1*
 
 %changelog
 * Tue Jun 30 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 0.5.1-1
