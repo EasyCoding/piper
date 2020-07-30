@@ -1,6 +1,6 @@
 Name: piper
 Version: 0.5.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 
 License: GPLv2+ and LGPLv2+
 URL: https://github.com/libratbag/%{name}
@@ -59,6 +59,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_mandir}/man1/*.1*
 
 %changelog
+* Tue Jul 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0.5.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
+
 * Tue Jun 30 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 0.5.1-1
 - Updated to version 0.5.1.
 
