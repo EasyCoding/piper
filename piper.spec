@@ -1,6 +1,6 @@
 Name: piper
 Version: 0.5.1
-Release: 2%{?dist}
+Release: 4%{?dist}
 
 License: GPLv2+ and LGPLv2+
 URL: https://github.com/libratbag/%{name}
@@ -17,7 +17,7 @@ BuildRequires: python3-devel
 BuildRequires: gettext-devel
 BuildRequires: python3-lxml
 BuildRequires: meson
-BuildRequires: git
+BuildRequires: git-core
 
 Requires: hicolor-icon-theme
 Requires: libratbag-ratbagd >= 0.10
@@ -59,6 +59,12 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_mandir}/man1/*.1*
 
 %changelog
+* Wed Jan 27 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.5.1-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
+
+* Wed Nov 04 2020 Peter Hutterer <peter.hutterer@redhat.com> 0.5.1-3
+- We only need git-core to build
+
 * Tue Jul 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0.5.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
 
